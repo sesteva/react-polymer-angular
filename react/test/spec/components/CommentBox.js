@@ -5,7 +5,7 @@ describe('CommentBox', function () {
   var CommentBox, component;
 
   beforeEach(function () {
-    CommentBox = require('components/CommentBox.js');
+    CommentBox = require('components/CommentBox/CommentBox.js');
     component = React.createElement(CommentBox);
   });
 

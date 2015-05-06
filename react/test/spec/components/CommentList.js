@@ -5,7 +5,7 @@ describe('CommentList', function () {
   var CommentList, component;
 
   beforeEach(function () {
-    CommentList = require('components/CommentList.js');
+    CommentList = require('components/CommentList/CommentList.js');
     component = React.createElement(CommentList);
   });
 

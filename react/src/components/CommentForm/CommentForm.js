@@ -3,7 +3,7 @@
 var React = require('react/addons');
 
 
-require('styles/CommentForm.css');
+require('./CommentForm.css');
 
 var CommentForm = React.createClass({
     handleSubmit: function(e) {

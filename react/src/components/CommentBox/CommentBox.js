@@ -2,12 +2,10 @@
 
 var React = require('react/addons');
 var $ = require('jquery');
-var CommentList = React.createFactory(require('./CommentList'));
-var CommentForm = React.createFactory(require('./CommentForm'));
+var CommentList = require('components/CommentList/CommentList');
+var CommentForm = require('components/CommentForm/CommentForm');
 
-
-
-require('styles/CommentBox.css');
+require('./CommentBox.css');
 
 var CommentBox = React.createClass({
     loadCommentsFromServer: function(){

@@ -1,11 +1,11 @@
 'use strict';
 
 var React = require('react/addons');
-var CommentBox = React.createFactory(require('./CommentBox'));
+var CommentBox = require('components/CommentBox/CommentBox');
 
 // CSS
 require('normalize.css');
-require('../styles/main.css');
+require('styles/main.css');
 
 var imageURL = require('../images/yeoman.png');
 

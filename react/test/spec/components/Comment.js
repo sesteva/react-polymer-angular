@@ -5,7 +5,7 @@ describe('Comment', function () {
   var Comment, component;
 
   beforeEach(function () {
-    Comment = require('components/CommentModel.js');
+    Comment = require('components/Comment/Comment.js');
     component = React.createElement(Comment);
   });
 

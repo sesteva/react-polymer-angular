@@ -52,7 +52,7 @@ module.exports = function (config) {
       }
     },
     exclude: [],
-    port: 8080,
+    port: 9090,
     logLevel: config.LOG_INFO,
     colors: true,
     autoWatch: false,
@@ -67,6 +67,7 @@ module.exports = function (config) {
     browsers: ['PhantomJS'],
     reporters: ['progress'],
     captureTimeout: 60000,
+    browserNoActivityTimeout: 60000,
     singleRun: true
   });
 };

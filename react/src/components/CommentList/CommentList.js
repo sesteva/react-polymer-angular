@@ -1,15 +1,15 @@
 'use strict';
 
 var React = require('react/addons');
-var CommentModel = React.createFactory(require('./CommentModel'));
+var CommentModel = require('components/Comment/Comment');
 
-require('styles/CommentList.css');
+require('./CommentList.css');
 
 var CommentList = React.createClass({
     render: function() {
         var commentNodes = this.props.data.map(function (comment) {
             return (
-                <CommentModel author={comment.author}>
+                <CommentModel author={comment.author} key={comment.id}>
                     {comment.text}
                 </CommentModel>
             );

@@ -5,7 +5,7 @@ describe('CommentForm', function () {
   var CommentForm, component;
 
   beforeEach(function () {
-    CommentForm = require('components/CommentForm.js');
+    CommentForm = require('components/CommentForm/CommentForm.js');
     component = React.createElement(CommentForm);
   });
 

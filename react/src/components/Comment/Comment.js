@@ -2,7 +2,7 @@
 
 var React = require('react/addons');
 
-require('styles/Comment.css');
+require('./Comment.css');
 
 var CommentModel = React.createClass({
     render: function() {
