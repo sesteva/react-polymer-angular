@@ -1,6 +1,11 @@
-Install
+Install Dependencies
     
     npm install
+    
+Note: make sure the fakeservice is already running before running the app
+    
+    cd commentsBox/fakeservice
+    dpd comments/app.dpd    
     
 Build & Run
 

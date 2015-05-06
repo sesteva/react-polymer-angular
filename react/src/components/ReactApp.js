@@ -12,7 +12,7 @@ var imageURL = require('../images/yeoman.png');
 var ReactApp = React.createClass({
   render: function() {
     return (
-        <CommentBox url="comments.json" pollInterval={2000}/>
+        <CommentBox url="http://localhost:2403/comments/" pollInterval={2000}/>
     );
   }
 });
