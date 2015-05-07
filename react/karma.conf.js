@@ -48,13 +48,14 @@ module.exports = function (config) {
       }
     },
     webpackServer: {
+      noInfo: true,
       stats: {
         colors: true
       }
     },
     exclude: [],
     port: 9090,
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_ERROR,
     colors: true,
     autoWatch: true,
     // Start these browsers, currently available:
