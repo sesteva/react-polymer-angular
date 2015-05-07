@@ -1,6 +1,6 @@
 'use strict';
 
-ddescribe('CommentList', function () {
+describe('CommentList', function () {
   var React = require('react/addons');
   var TestUtils = require('react/lib/ReactTestUtils');
   var CommentList, CommentModel;
