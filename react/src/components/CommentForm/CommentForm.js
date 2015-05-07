@@ -5,7 +5,25 @@ var React = require('react/addons');
 
 require('./CommentForm.css');
 
+/*
+
+ ## Example
+
+ <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
+
+ */
+
+
 var CommentForm = React.createClass({
+
+    /*
+      The function to execute when the form is submitted
+
+      @attribute onCommentSubmit
+      @type function
+    */
+
+
     handleSubmit: function(e) {
         e.preventDefault();
         var author = React.findDOMNode(this.refs.author).value.trim();
@@ -14,7 +32,6 @@ var CommentForm = React.createClass({
             return;
         }
         this.props.onCommentSubmit({author: author, msg: msg});
-        // TODO: send request to the server
         React.findDOMNode(this.refs.author).value = '';
         React.findDOMNode(this.refs.msg).value = '';
         return;

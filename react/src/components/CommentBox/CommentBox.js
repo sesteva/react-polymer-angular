@@ -7,7 +7,30 @@ var CommentForm = require('components/CommentForm/CommentForm');
 
 require('./CommentBox.css');
 
+/*
+
+ ## Example
+
+ <CommentBox url="http://localhost:2403/comments/" pollInterval={2000}/>
+
+ */
+
 var CommentBox = React.createClass({
+
+    /*
+      The url target of the request
+
+      @attribute data
+      @type String
+    */
+
+    /*
+      The pollInterval determines the frequency we request for comments
+
+      @attribute pollInternal
+      @type int
+    */
+
     loadCommentsFromServer: function(){
         $.ajax({
             url: this.props.url,
