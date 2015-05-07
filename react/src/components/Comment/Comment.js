@@ -33,10 +33,10 @@ var CommentModel = React.createClass({
     render: function() {
         return (
             <div className="comment">
-                <h2 className="commentAuthor">
+                <h2 className="commentAuthor" ref="author">
                     {this.props.author}
                 </h2>
-                <span>{this.props.children}</span>
+                <span ref="msg">{this.props.children}</span>
             </div>
         );
     }

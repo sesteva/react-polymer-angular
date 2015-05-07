@@ -27,6 +27,7 @@ module.exports = function (config) {
           loader: 'url-loader?limit=10000&mimetype=image/png'
         }, {
           test: /\.js$/,
+          exclude: /node_modules/,
           loader: 'babel-loader'
         }, {
           test: /\.css$/,
@@ -55,7 +56,7 @@ module.exports = function (config) {
     port: 9090,
     logLevel: config.LOG_INFO,
     colors: true,
-    autoWatch: false,
+    autoWatch: true,
     // Start these browsers, currently available:
     // - Chrome
     // - ChromeCanary
@@ -68,6 +69,6 @@ module.exports = function (config) {
     reporters: ['progress'],
     captureTimeout: 60000,
     browserNoActivityTimeout: 60000,
-    singleRun: true
+    singleRun: false
   });
 };
