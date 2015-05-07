@@ -12,4 +12,7 @@ describe('CommentBox', function () {
   it('should create a new instance of CommentBox', function () {
     expect(component).toBeDefined();
   });
+
+
+
 });

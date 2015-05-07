@@ -1,6 +1,6 @@
 'use strict';
 
-ddescribe('Comment', function () {
+describe('Comment', function () {
   var React = require('react/addons');
   var TestUtils = require('react/lib/ReactTestUtils');
   var Comment;
