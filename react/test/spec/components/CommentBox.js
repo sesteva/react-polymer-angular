@@ -13,6 +13,4 @@ describe('CommentBox', function () {
     expect(component).toBeDefined();
   });
 
-
-
 });

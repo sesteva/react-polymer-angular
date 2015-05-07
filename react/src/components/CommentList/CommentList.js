@@ -32,7 +32,7 @@ var CommentList = React.createClass({
     });
     return (
       <div className="commentList">
-        {commentNodes}
+        {this.props.data.length > 0 ? commentNodes : 'No comments yet'}
       </div>
     );
   }
