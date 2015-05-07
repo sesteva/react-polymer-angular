@@ -5,7 +5,7 @@ var path = require('path');
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine-ajax', 'jasmine'],
     files: [
       'test/helpers/**/*.js',
       'test/spec/components/**/*.js'
