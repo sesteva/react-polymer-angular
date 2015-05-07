@@ -1,6 +1,6 @@
 'use strict';
 
-ddescribe('CommentForm', function () {
+describe('CommentForm', function () {
   var React = require('react/addons');
   var TestUtils = require('react/lib/ReactTestUtils');
   var CommentForm, component, CommentBox;
