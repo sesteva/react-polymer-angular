@@ -13,9 +13,10 @@ describe('CommentForm', function () {
     spyOn(CommentBox, 'handleCommentSubmit');
   });
 
-  it('should create a new instance of CommentForm', function () {
-    component = React.createElement(CommentForm);
-    expect(component).toBeDefined();
+  afterEach(function() {
+    if (component && component.isMounted()) {
+      React.unmountComponentAtNode(component.getDOMNode());
+    }
   });
 
   it('should submit the form when user enters msg and author', function (){
