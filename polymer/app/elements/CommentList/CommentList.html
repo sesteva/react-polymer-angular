@@ -1,0 +1,25 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<dom-module id="comment-list">
+    <template>
+        <template is="x-repeat" items="{{data}}">
+            <comment-model author="{{item.author}}" msg="{{item.msg}}">
+            </comment-model>
+        </template>
+        <div hidden$="[[data.length > 0]]">No comments yet</div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "comment-list",
+        properties: {
+            data: {
+                type: Array,
+                value: function(){
+                    return [];
+                }
+            }
+        }
+    });
+</script>
