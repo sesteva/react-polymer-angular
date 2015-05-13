@@ -5,7 +5,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // load all grunt tasks
   require('load-grunt-tasks')(grunt);
-  grunt.loadNpmTasks('web-component-tester');
+  //grunt.loadNpmTasks('web-component-tester');
 
   // configurable paths
   var yeomanConfig = {
@@ -272,7 +272,7 @@ module.exports = function (grunt) {
     ]);
   });
 
-  
+
   grunt.registerTask('test:local', ['wct-test:local']);
   grunt.registerTask('test:remote', ['wct-test:remote']);
 
