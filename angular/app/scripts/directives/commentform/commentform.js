@@ -9,9 +9,9 @@
 angular.module('commentForm', [])
   .directive('commentForm', function () {
     return {
-      template: '<form className="commentForm">' +
-                  '<input type="text" placeholder="Your name" ng-model="comment.author"/>' +
-                  '<input type="text" placeholder="Say something..." ng-model="comment.msg"/>' +
+      template: '<form className="commentForm" name="form">' +
+                  '<input type="text" placeholder="Your name" ng-model="comment.author" name="author"/>' +
+                  '<input type="text" placeholder="Say something..." ng-model="comment.msg" name="msg"/>' +
                   '<input type="submit" value="Post" ng-click="submitComment()"/>' +
                 '</form>',
       restrict: 'E',
