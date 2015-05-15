@@ -1,0 +1,13 @@
+{
+  "name": "polymer",
+  "version": "0.0.0",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.8.0-rc.2",
+    "core-ajax": "Polymer/core-ajax#0.8-preview-main"
+  },
+  "devDependencies": {
+    "web-component-tester": "~2.2.6",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "test-fixture": "polymerelements/test-fixture#^0.9.0"
+  }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>poly foo</title>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <!-- endreplace-->
+</head>
+
+<body>
+
+  <!--<comment-model author="Santiago">Hola</comment-model>-->
+  <!--<comment-list data='[{"author": "John", "msg": "h"}, {"author": "Bob", "msg" : "2"}]'></comment-list>-->
+  <!--<comment-list data='[]'></comment-list>-->
+  <!--<comment-form id="form"></comment-form>-->
+  <comment-box url="http://localhost:2403/comments/" poll-interval="10000"></comment-box>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild-->
+  <script>
+    document.querySelector('comment-form').addEventListener('submitted', function(e) {
+      console.log(e.type, e.detail.msg); // "ouch" "That hurt!"
+    });
+  </script>
+
+</body>
+
+</html>

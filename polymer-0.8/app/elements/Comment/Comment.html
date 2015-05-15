@@ -1,0 +1,28 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<dom-module id="comment-model">
+    <template>
+        <div className="comment">
+            <h2 className="commentAuthor">
+                <span id="author">{{author}}</span>
+            </h2>
+            <span id="msg">{{msg}}</span>
+            <!--x-repeat in Alpha version does not allow to pass inner scope and use it as content-->
+            <!-- <content/> -->
+
+        </div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "comment-model",
+        properties: {
+            author: {
+                type: String,
+                value: ""
+            },
+            msg: String
+        }
+    });
+</script>
