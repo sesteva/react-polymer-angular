@@ -6,7 +6,7 @@
             <comment-model author="{{item.author}}" msg="{{item.msg}}">
             </comment-model>
         </template>
-        <div hidden$="[[_computeNoCommentsDisplay()]]">No comments yet</div>
+        <div hidden$="{{noCommentsHidden}}">No comments yet</div>
     </template>
 </dom-module>
 
@@ -19,11 +19,18 @@
                 value: function(){
                     return [];
                 }
+            },
+            noCommentsHidden: {
+              type: Boolean,
+              value: true,
+              computed: '_computeNoCommentsHidden(data)'
             }
         },
-        _computeNoCommentsDisplay: function(data){
-            if(!data) return true;
-            return data.length < 1;
+        _computeNoCommentsHidden: function(data){
+            if(typeof data === 'undefined') {
+              return false;
+            }
+            return data.length > 0;
         }
     });
 </script>

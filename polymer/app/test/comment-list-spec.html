@@ -14,10 +14,16 @@
 </head>
 <body>
 
-<test-fixture id="basic">
+<test-fixture id="multipleComments">
     <template>
         <comment-list data='[{"author": "John", "msg": "h"}, {"author": "Bob", "msg" : "2"}]'></comment-list>
     </template>
+</test-fixture>
+
+<test-fixture id="noComments">
+  <template>
+    <comment-list data='[]'></comment-list>
+  </template>
 </test-fixture>
 
 <script>
@@ -27,13 +33,30 @@
         var element;
 
         setup(function(){
-            element = fixture('basic');
+            multipleElements = fixture('multipleComments');
+            noElements = fixture('noComments');
         });
 
       test('render list of comments ', function(done) {
         flush(function(){
-          var comments = element.querySelectorAll('comment-model');
+          var comments = multipleElements.querySelectorAll('comment-model');
           assert.equal(comments.length, 2);
+          done()
+        });
+      });
+
+      test('render No Comments msg', function(done){
+        flush(function(){
+          var msg = noElements.textContent;
+          assert.notStrictEqual(msg, 'No comments yet');
+          done()
+        });
+      });
+
+      test('not render comments', function(done){
+        flush(function(){
+          var comments = noElements.querySelectorAll('comment-model');
+          assert.equal(comments.length, 0);
           done()
         });
       });
