@@ -16,13 +16,13 @@
 
 <test-fixture id="basic">
     <template>
-        <comment-list id='list'></comment-list>
+        <comment-list data='[{"author": "John", "msg": "h"}, {"author": "Bob", "msg" : "2"}]'></comment-list>
     </template>
 </test-fixture>
 
 <script>
 
-    suite('<comment-model', function(){
+    suite('<comment-list>', function(){
 
         var element;
 
@@ -30,16 +30,13 @@
             element = fixture('basic');
         });
 
-        test('should render the author', function(){
-            flush(function(){
-                element.data = [{author: 'Santiago', msg: 'Hola', id:1}]
-                done();
-            })
-
-            console.log(element.data[0])
-            assert.equal(element, 'Santiago')
+      test('render list of comments ', function(done) {
+        flush(function(){
+          var comments = element.querySelectorAll('comment-model');
+          assert.equal(comments.length, 2);
+          done()
         });
-
+      });
 
     });
 
