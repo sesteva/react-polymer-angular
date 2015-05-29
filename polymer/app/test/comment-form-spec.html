@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>paper-toolbar basic tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <script src="../../bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="../../bower_components/web-component-tester/browser.js"></script>
+    <script src="../../bower_components/test-fixture/test-fixture-mocha.js"></script>
+    <script src="../../bower_components/iron-test-helpers/mock-interactions.js"></script>
+    <link rel="import" href="../elements/CommentForm/CommentForm.html">
+    <link rel="import" href="../../bower_components/test-fixture/test-fixture.html">
+
+</head>
+<body>
+
+    <test-fixture id="basicForm">
+        <template>
+            <comment-form id="form"></comment-form>
+        </template>
+    </test-fixture>
+
+<script>
+
+    suite('<comment-form>', function(){
+
+        var element;
+
+        setup(function(){
+            form = fixture('basicForm');
+        });
+
+        test('should submit the form when user enters msg and author', function(done) {
+            form.$.author.value = 'Santiago';
+            form.$.msg.value = 'Hola';
+
+            form.addEventListener('submitted', function(event) {
+                var model = event.detail;
+                assert.deepEqual({ author: 'Santiago', msg: 'Hola' }, model);
+                done();
+            });
+
+            var button  = form.querySelector('#submit');
+            MockInteractions.tap(button);
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

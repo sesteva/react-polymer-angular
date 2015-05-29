@@ -37,7 +37,7 @@
             noElements = fixture('noComments');
         });
 
-      test('render list of comments ', function(done) {
+      test('should render the comments', function(done) {
         flush(function(){
           var comments = multipleElements.querySelectorAll('comment-model');
           assert.equal(comments.length, 2);
@@ -45,7 +45,7 @@
         });
       });
 
-      test('render No Comments msg', function(done){
+      test('should render  - No Comments yet - msg if the data is empty', function(done){
         flush(function(){
           var msg = noElements.textContent;
           assert.notStrictEqual(msg, 'No comments yet');
@@ -53,7 +53,7 @@
         });
       });
 
-      test('not render comments', function(done){
+      test('should not render any comment if the data is empty', function(done){
         flush(function(){
           var comments = noElements.querySelectorAll('comment-model');
           assert.equal(comments.length, 0);
