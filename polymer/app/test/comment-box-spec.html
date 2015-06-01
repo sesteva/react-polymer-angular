@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>paper-toolbar basic tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <script src="../../bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="../../bower_components/web-component-tester/browser.js"></script>
+    <script src="../../bower_components/test-fixture/test-fixture-mocha.js"></script>
+    <script src="../../bower_components/iron-test-helpers/mock-interactions.js"></script>
+    <link rel="import" href="../elements/CommentBox/CommentBox.html">
+    <link rel="import" href="../../bower_components/test-fixture/test-fixture.html">
+
+</head>
+<body>
+
+<test-fixture id="basicBox">
+    <template>
+        <comment-box url="/comments" poll-interval="10000" id="box"></comment-box>
+    </template>
+</test-fixture>
+
+<script>
+
+    suite('<comment-box>', function(){
+
+        var box;
+        var responseHeaders = {
+            json: { 'Content-Type': 'application/json' },
+            plain: { 'Content-Type': 'text/plain' }
+        };
+        var ajax;
+        var request;
+        var server;
+
+        setup(function(){
+            server = sinon.fakeServer.create();
+            server.respondWith(
+                    'GET',
+                    /\/comments.*/,
+                    [
+                        200,
+                        responseHeaders.json,
+                        '[{"author": "John", "msg": "h"}, {"author": "Bob", "msg" : "2"}]'
+                    ]
+            );
+
+            box = fixture('basicBox');
+            request = box.loadCommentsFromServer();
+            server.respond();
+        });
+
+        teardown(function() {
+            server.restore();
+        });
+
+        test('should make an http request based on passed url', function(done){
+            assert.equal(request.xhr.url, '/comments');
+            assert.equal(request.xhr.method, 'GET');
+            assert.deepEqual(request.response, [{"author": "John", "msg": "h"}, {"author": "Bob", "msg" : "2"}] );
+            done();
+        });
+
+        test('should set data model', function(done){
+            flush(function(){
+                assert.deepEqual(box.data, [{"author": "John", "msg": "h"}, {"author": "Bob", "msg" : "2"}]);
+                done();
+            });
+        });
+
+        test('should render a CommentList', function(done){
+            flush(function(){
+                var list = box.querySelector('comment-list');
+                assert.isDefined(list);
+                done();
+            });
+        });
+
+        test('should render a CommentForm', function(done){
+            flush(function(){
+                var form = box.querySelector('comment-form');
+                assert.isDefined(form);
+                done();
+            });
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

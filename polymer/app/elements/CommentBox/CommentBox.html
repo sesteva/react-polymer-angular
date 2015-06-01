@@ -44,7 +44,7 @@
             setInterval( this.loadCommentsFromServer.bind(this), this.pollInterval );
         },
         loadCommentsFromServer: function(){
-            this.$.ajax.generateRequest();
+            return this.$.ajax.generateRequest();
         },
         handleCommentSubmit: function(e){
 //            this.data.concat(e.detail);
