@@ -45,6 +45,33 @@
             MockInteractions.tap(button);
         });
 
+        test('should not submit the form if msg or author fields are empty', function(done) {
+            form.$.author.value = 'Santiago';
+
+            form.addEventListener('click', function(event) {
+                assert.equal('Santiago', form.$.author.value);
+                assert.equal('', form.$.msg.value);
+                done();
+            });
+
+            var button  = form.querySelector('#submit');
+            MockInteractions.tap(button);
+        });
+
+        test('should clear all inputs after submitting the form', function(done) {
+            form.$.author.value = 'Santiago';
+            form.$.msg.value = 'Hola';
+
+            form.addEventListener('click', function(event) {
+                assert.equal('', form.$.author.value);
+                assert.equal('', form.$.msg.value);
+                done();
+            });
+
+            var button  = form.querySelector('#submit');
+            MockInteractions.tap(button);
+        });
+
     });
 
 
