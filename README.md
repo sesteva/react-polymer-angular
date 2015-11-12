@@ -1,5 +1,6 @@
 # Requirements
 
+- Bower
 - Nodejs
 - NPM
 - Install mongoDb and add it to your PATH
