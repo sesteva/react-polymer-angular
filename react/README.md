@@ -1,21 +1,30 @@
-Install Dependencies
-    
-    npm install
-    
-Note: make sure the fakeservice is already running before running the app
-    
-    cd commentsBox/fakeservice
-    dpd comments/app.dpd    
-    
-Build & Run
+# Install Dependencies
 
+    cd react  
+    npm install
+
+# fakeservice
+
+1- We need to make sure the fakeservice is already running before running the app.
+Go go fakeservice folder and follow the README file.
+
+2- Once you are done you can run the fakeService for the app
+
+    cd ../fakeservice/comments/fakeservice
+    dpd comments/app.dpd   
+
+Leave these terminal opened.    
+
+3- Build & Run
+
+    cd react
     grunt serve
 
-Test
+4- Test
 
     grunt test
 
-Problem
+5- Troubleshooting
 
     Grunt watch error - Waiting…Fatal error: watch ENOSPC
 

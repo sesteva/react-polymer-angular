@@ -1,11 +1,14 @@
-## GOAL
+# Requirements
 
-Compare AngularJS, Polymer and ReactJS to create a component.
+- Nodejs
+- NPM
+- Install mongoDb and add it to your PATH
 
-Criteria:
+# Install Dependencies
 
-    - learning curve
-    - development speed
-    - easy to test
-    - performance, inspector, etc tools
-    - browser support
+    cd fakeservice
+    npm install
+
+# Running App
+
+Now choose the folder by framework's name and just follow the corresponding README file instructions located in each folder.
