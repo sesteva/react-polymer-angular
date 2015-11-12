@@ -1,12 +1,34 @@
-# angular
+# Install Dependencies
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+    cd angular  
+    npm install
+    bower install
 
-## Build & development
+# fakeservice
 
-Run `grunt` for building and `grunt serve` for preview.
+1- We need to make sure the fakeservice is already running before running the app.
+Go go fakeservice folder and follow the README file.
 
-## Testing
+2- Once you are done you can run the fakeService for the app
 
-Running `grunt test` will run the unit tests with karma.
+    cd ../fakeservice/comments/fakeservice
+    dpd comments/app.dpd   
+
+Leave these terminal opened.    
+
+3- Build & Run
+
+    cd angular
+    grunt serve
+
+4- Test
+
+    grunt test
+
+5- Troubleshooting
+
+    Grunt watch error - Waiting…Fatal error: watch ENOSPC
+
+Fix
+
+    echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p

@@ -9,7 +9,7 @@
 angular.module('commentBox', ['commentList', 'commentForm'])
   .directive('commentBox', function ($http) {
     return {
-      template: '<div className="commentBox">' +
+      template: '<div class="commentBox">' +
                   '<h1>Comments</h1>' +
                   '<comment-list comments="data"></comment-list>' +
                   '<comment-form></comment-form>' +
@@ -45,5 +45,3 @@ angular.module('commentBox', ['commentList', 'commentForm'])
         scope.$on('submitted', handleCommentSubmit);
       }
   }});
-
-

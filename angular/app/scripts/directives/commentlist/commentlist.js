@@ -9,7 +9,7 @@
 angular.module('commentList', ['comment'])
   .directive('commentList', function () {
     return {
-      template: '<div className="commentList">' +
+      template: '<div class="commentList">' +
                   '<comment-model ng-repeat="comment in comments" author="{{comment.author}}">' +
                     '{{comment.msg}}' +
                   '</comment-model>' +

@@ -9,8 +9,8 @@
 angular.module('comment', [])
   .directive('commentModel', function () {
     return {
-      template: '<div className="comment">' +
-                  '<h2 className="commentAuthor">' +
+      template: '<div class="comment">' +
+                  '<h2 class="commentAuthor">' +
                       '{{author}}' +
                   '</h2>' +
                   '<ng-transclude></ng-transclude>' +
