@@ -22,7 +22,7 @@ We are going to build component that displays how long ago was the comment poste
 - “As a User,Given the list of comments includes at least 1 comment, When the list is displayed, Then I want to see how long ago has the comment been posted. For example: 1 minute ago”
 - “As a User, Given the comment was posted less than 59 seconds ago, When the comment is displayed in the list, Then I want to see “1 minute ago”
 - “As a User, Given the comment was posted more than 59 seconds ago but less than 59 minutes ago, When the comment is displayed in the list, Then I want to see “39 minutes ago”
- - “As a User, Given the comment was posted more than 59 minutes ago, When the comment is displayed in the list, Then I want to see “1 hour ago”
+- “As a User, Given the comment was posted more than 59 minutes ago, When the comment is displayed in the list, Then I want to see “1 hour ago”
 - “As a User, Given the comment was posted more than 59 minutes ago but less than 23 minutes and 59 mins ago, When the comment is displayed in the list, Then I want to see “4 hours ago”
 - “As a User, Given the comment was posted more than 23 hours and 59 mins ago, When the comment is displayed in the list, Then I want to see “1 day ago”
 - “As a User, Given the comment was posted more than 2 days  ago, When the comment is displayed in the list, Then I want to see “4 days ago”
@@ -47,13 +47,9 @@ The folder fakeservice contains a small application that represent s your backen
 ### Before you made your changes
 Please make sure to push your branch to github
 
-
-
 # Install Dependencies
-
     cd fakeservice
     npm install
 
 # Running App
-
 Now choose the folder by framework's name and just follow the corresponding README file instructions located in each folder.
