@@ -1,7 +1,6 @@
 
 
 ## Requirements
-
 - Bower
 - Nodejs
 - NPM
@@ -47,9 +46,9 @@ The folder fakeservice contains a small application that represent s your backen
 ### Before you made your changes
 Please make sure to push your branch to github
 
-# Install Dependencies
+### Install Dependencies
     cd fakeservice
     npm install
 
-# Running App
+### Running App
 Now choose the folder by framework's name and just follow the corresponding README file instructions located in each folder.
