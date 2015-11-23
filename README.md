@@ -7,8 +7,8 @@
 - Install mongoDb and add it to your PATH
 
 ## Start
-Clone the following repo: https://github.com/sesteva/react-polymer-angular
-Please create a new branch. Use your name and lastname as Branch Name.
+Fork the following repo: https://github.com/sesteva/react-polymer-angular into your github account.
+When you are done pelase send us your repo link.
 
 ## Your task
 You will notice the project contains the same app implemented in 3 different JS frameworks.
@@ -44,7 +44,7 @@ The folder fakeservice contains a small application that represent s your backen
     Open http://localhost:2403/dashboard/comments/data/
 
 ### Before you made your changes
-Please make sure to push your branch to github
+Please make sure to push your branch to github and send us the link
 
 ### Install Dependencies
     cd fakeservice
