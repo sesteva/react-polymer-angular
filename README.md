@@ -16,15 +16,15 @@ Your goal is to implement the following Feature. You can choose to do it in one 
 
 ### Feature – Comment-TimeLapse
 We are going to build component that displays how long ago was the comment posted.
+General Description: - “As a User,Given the list of comments includes at least 1 comment, When the list is displayed, Then I want to see how long ago has the comment been posted. Just like the one on Github next to the file name. 1 minute ago, 2 days ago, etc"
 
 ### Acceptance criteria
-- “As a User,Given the list of comments includes at least 1 comment, When the list is displayed, Then I want to see how long ago has the comment been posted. For example: 1 minute ago”
-- “As a User, Given the comment was posted less than 59 seconds ago, When the comment is displayed in the list, Then I want to see “1 minute ago”
-- “As a User, Given the comment was posted more than 59 seconds ago but less than 59 minutes ago, When the comment is displayed in the list, Then I want to see “39 minutes ago”
-- “As a User, Given the comment was posted more than 59 minutes ago, When the comment is displayed in the list, Then I want to see “1 hour ago”
-- “As a User, Given the comment was posted more than 59 minutes ago but less than 23 minutes and 59 mins ago, When the comment is displayed in the list, Then I want to see “4 hours ago”
-- “As a User, Given the comment was posted more than 23 hours and 59 mins ago, When the comment is displayed in the list, Then I want to see “1 day ago”
-- “As a User, Given the comment was posted more than 2 days  ago, When the comment is displayed in the list, Then I want to see “4 days ago”
+- “As a User, Given the comment was posted less than 59 seconds ago, When the comment is displayed in the list, Then I want to always see “1 minute ago”
+- “As a User, Given the comment was posted more than 59 seconds ago but less than 59 minutes ago, When the comment is displayed in the list, Then I want to see the amount of minutes elapsed, for example “39 minutes ago” or "25 minutes ago" etc...
+- “As a User, Given the comment was posted less than 59 minutes ago, When the comment is displayed in the list, Then I want to always see “1 hour ago”
+- “As a User, Given the comment was posted more than 59 minutes ago but less than 23 minutes and 59 mins ago, When the comment is displayed in the list, Then I want to see the amount hours elapsed, for example “4 hours ago” or "12 hours ago" etc...
+- “As a User, Given the comment was posted less than 23 hours and 59 mins ago, When the comment is displayed in the list, Then I want to always see “1 day ago”
+- “As a User, Given the comment was posted more than 1 day  ago, When the comment is displayed in the list, Then I want to see how many days have elapsed, for example “4 days ago” or "6 days ago"
 
 ### Requirements
 You should have: 
