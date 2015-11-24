@@ -10,15 +10,17 @@ angular.module('comment', [])
   .directive('commentModel', function () {
     return {
       template: '<div class="comment">' +
-                  '<h2 class="commentAuthor">' +
+                  '<span class="author">' +
                       '{{author}}' +
-                  '</h2>' +
+                  '</span>' +
                   '<ng-transclude></ng-transclude>' +
+				  '<span class="age">{{age}}</span>' +
                 '</div>',
       restrict: 'E',
       transclude: true,
       scope: {
-        author: '@'
+        author: '@',
+		age: '@'
       },
       link: function postLink(scope, element, attrs) {}
     };

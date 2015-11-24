@@ -31,6 +31,7 @@ angular.module('commentBox', ['commentList', 'commentForm'])
         };
         var handleCommentSubmit = function (event, data) {
           var comment = data;
+		  comment.dateTime = new Date().getTime();
           scope.data.concat([comment]);
           $http.post(scope.url, comment)
             .success(function(data, status, headers, config){
