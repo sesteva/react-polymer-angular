@@ -9,13 +9,21 @@
 			"id": "author",
 			"order": 0
 		},
-		"msg": {
-			"name": "msg",
+		"message": {
+			"name": "message",
 			"type": "string",
 			"typeLabel": "string",
 			"required": true,
-			"id": "msg",
+			"id": "message",
 			"order": 1
+		},
+		"dt": {
+			"name": "dt",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "dt",
+			"order": 2
 		}
 	}
 }
