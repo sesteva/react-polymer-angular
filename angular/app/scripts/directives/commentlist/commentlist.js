@@ -11,14 +11,19 @@ angular.module('commentList', ['comment'])
     return {
       template: '<div class="commentList">' +
                   '<comment-model ng-repeat="comment in comments" author="{{comment.author}}">' +
-                    '{{comment.msg}}' +
+                    '<div class="commentMessage"><span class="msg">{{comment.message}}</span></div>' +
+                    '<div class="commentPostedAgo align-right">'+
+                    '<span class="postedSpan" ng-show="comment.formattedDate != null">Posted </span>' +
+                    '<span class="timeLapseSpan">{{comment.formattedDate}}</span>' +
+                    '</div>' +
                   '</comment-model>' +
-                  '<span ng-if="comments.length < 1">No comments yet</span>' +
+                  '<span class="no-comments" ng-if="comments.length < 1">No comments yet</span>' +
                 '</div>',
       restrict: 'E',
       scope: {
         comments: '='
       },
-      link: function postLink(scope, element, attrs) {}
+      link: function postLink(scope, element, attrs) {  
+      }
     };
   });
